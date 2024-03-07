@@ -96,12 +96,10 @@ console.log(message);
 let playAnimation = false;
 // yes or no user prompt upon page load - prompting "are you okay with viewing animation?"
 window.addEventListener("load", function accessiblePrompt(){
-    if(confirm("Hello! Are you okay with viewing an animation?")){
-        playAnimation = true;
-        console.log( playAnimation );
+    if(playAnimation = confirm("Hello! Are you okay with viewing an animation?")){
+        console.log( "Yay! Animations!" );
     }else {
         console.log("No animation, got it!");
     };
-
 }
 );
