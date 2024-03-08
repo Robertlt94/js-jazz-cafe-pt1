@@ -1,3 +1,4 @@
+/* imported custom text */
 @import url('https://fonts.cdnfonts.com/css/callie-chalk-font');
 
 body {
@@ -7,6 +8,9 @@ body {
     color: #FFF5E1; /* Soft off-white for text to complement the warm background */
     margin: 0;
     padding: 0;
+    /* hides scrollbars preventing scrolling for extra content - for animated banner */
+    overflow: hidden;
+    width: 100%;
 }
 
 .container {
@@ -52,19 +56,54 @@ header {
 
 #headerInfo {
     color: #FFF5E1;
-    font-family: 'Callie Chalk Font', sans-serif;
-    letter-spacing: 4px;
-    font-weight: bolder;
-    font-size: larger;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255); /* Consistent text shadow styling with h1 */
 }
 
+/* specifies the div that's created in JS when the user says yes to the animation prompt */
 #headerInfo div {
-    text-overflow: hidden;
+    /* ensures that the text does not wrap around */
     white-space: nowrap;
+    /* for mozilla users */
+    -moz-transform: translateX(100%);
+    /* for safari and chrome users */
+    -webkit-transform: translateX(100%);
+    /* translates across the X axis */
+    transform: translateX(100%);
+    /* for mozilla users */
+    -moz-animation: banner-animation 10s linear infinite;
+    /* for safari and chrome users */
+    -webkit-animation: banner-animation 10s linear infinite;
+    /* syntax: @keyframes animation-duration animation-timing-function animation-iteration-count */
+    animation: banner-animation 10s linear infinite;
+    /* delays the animation by 1 second */
+    animation-delay: 1s;
+
+}
+
+/* for mozilla users */
+@-moz-keyframes banner-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+}
+
+/* for safari and chrome users */
+@keyframes banner-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
 }
 
 .chalkFont {
     color: #004211;
+    /* custom text, if not available, uses commonly used font sans-serif */
     font-family: 'Callie Chalk Font', sans-serif;
     letter-spacing: 4px;
     font-weight: larger;

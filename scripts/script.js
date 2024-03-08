@@ -101,11 +101,15 @@ function animation(){
 
 // yes or no user prompt upon page load - prompting "are you okay with viewing animation?"
 window.addEventListener("DOMContentLoaded", () => {
-    if(showAnimation = confirm("Hello! Are you okay with viewing an animation?")){
+    if(showAnimation = confirm("Welcome to the Jazz Cafe! Are you okay with viewing an animation?")){
         console.log( "Yay! Animations!" );
         let banner = document.getElementById("headerInfo");
         let bannerContent = document.createElement("div");
+        message = message.replace("WELCOME TO OUR JAZZ CAFE! ", "");
+        message = message.concat(" SONGS!");
+        // console.log(message);
         bannerContent.textContent = message;
+        // bannerContent.textContent = "TESTING TESTING TESTING TESTING TESTING TESTING TESTING";
         banner.appendChild(bannerContent);
     }else {
         console.log("No animation, got it!");
