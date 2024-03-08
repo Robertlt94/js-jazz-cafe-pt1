@@ -5,12 +5,12 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: url("../image/coffee_rorozoa_3_04.jpg") no-repeat center fixed; /* #7B6B43; A warm earthy background color */
     background-size: cover;
-    color: #FFF5E1; /* Soft off-white for text to complement the warm background */
+    /* color: #FFF5E1; Soft off-white for text to complement the warm background */
     margin: 0;
     padding: 0;
+    width: 100vw;
     /* hides scrollbars preventing scrolling for extra content - for animated banner */
     overflow: hidden;
-    width: 100%;
 }
 
 .container {
@@ -39,31 +39,39 @@ p {
     color: #004211; /* Cream-colored text for easy reading against the warm background */
 }
 
-h3 {
+h4 {
     font-size: 28px;
     color: #004211; /* Matching the golden hue for consistency in headings */
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .2); /* Consistent text shadow styling with h1 */
 }
 
-header {
+header div {
     /* background-color: rgba(16, 163, 0, 0.244); */
     background-color: transparent;
-    margin: 50px 0 50px 0;
     padding: 30px 0 30px 0;
     text-align: center;
+    /* prevents text from wrapping after reaching the end of the user's viewport */
+    white-space: nowrap;
+    text-overflow: hidden;
+    display: table-cell;
+    box-sizing: border-box;
 }
 
 #headerInfo {
+    display: table;
     color: #FFF5E1;
     width: 100%;
     text-shadow: 1px 1px 2px rgb(255, 255, 255); /* Consistent text shadow styling with h1 */
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* specifies the div that's created in JS when the user says yes to the animation prompt */
 #headerInfo div {
+    /* overflow: hidden; */
     /* ensures that the text does not wrap around */
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /* for mozilla users */
     -moz-transform: translateX(100%);
     /* for safari and chrome users */
@@ -71,14 +79,13 @@ header {
     /* translates across the X axis */
     transform: translateX(100%);
     /* for mozilla users */
-    -moz-animation: banner-animation 10s linear infinite;
+    -moz-animation: banner-animation 20s linear infinite;
     /* for safari and chrome users */
-    -webkit-animation: banner-animation 10s linear infinite;
+    -webkit-animation: banner-animation 20s linear infinite;
     /* syntax: @keyframes animation-duration animation-timing-function animation-iteration-count */
-    animation: banner-animation 10s linear infinite;
+    animation: banner-animation 20s linear infinite;
     /* delays the animation by 1 second */
-    animation-delay: 1s;
-
+    /* animation-delay: 1s; */
 }
 
 /* for mozilla users */

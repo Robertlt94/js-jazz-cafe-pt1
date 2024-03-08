@@ -95,10 +95,6 @@ console.log(message);
 // playground - develop a animated banner that scrolls the message from left to right
 let showAnimation = false;
 
-function animation(){
-
-}
-
 // yes or no user prompt upon page load - prompting "are you okay with viewing animation?"
 window.addEventListener("DOMContentLoaded", () => {
     if(showAnimation = confirm("Welcome to the Jazz Cafe! Are you okay with viewing an animation?")){
@@ -115,7 +111,8 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log("No animation, got it!");
         let main = document.getElementById("specials");
         main.innerHTML = "";
-        let mainContent = document.createElement("span");
+        let mainContent = document.createElement("h4");
+        message = message.concat(" SONGS!");
         mainContent.textContent = message;
         main.appendChild(mainContent);
     };
