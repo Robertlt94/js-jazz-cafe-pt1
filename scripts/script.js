@@ -94,16 +94,25 @@ console.log(message);
 
 // playground - develop a animated banner that scrolls the message from left to right
 let showAnimation = false;
+
+function animation(){
+
+}
+
 // yes or no user prompt upon page load - prompting "are you okay with viewing animation?"
 window.addEventListener("DOMContentLoaded", () => {
     if(showAnimation = confirm("Hello! Are you okay with viewing an animation?")){
         console.log( "Yay! Animations!" );
-        let banner = document.getElementById("headerInfo")
-        banner.textContent = message;
+        let banner = document.getElementById("headerInfo");
+        let bannerContent = document.createElement("div");
+        bannerContent.textContent = message;
+        banner.appendChild(bannerContent);
     }else {
         console.log("No animation, got it!");
-        let banner = document.getElementById("headerInfo")
-        bannerMessage.textContent = message;
-        banner.appendChild(bannerMessage);
+        let main = document.getElementById("specials");
+        main.innerHTML = "";
+        let mainContent = document.createElement("span");
+        mainContent.textContent = message;
+        main.appendChild(mainContent);
     };
 });

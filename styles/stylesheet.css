@@ -1,9 +1,8 @@
+@import url('https://fonts.cdnfonts.com/css/callie-chalk-font');
+
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: url("../image/coffee_rorozoa_3_04.jpg") no-repeat center center fixed; /* #7B6B43; A warm earthy background color */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url("../image/coffee_rorozoa_3_04.jpg") no-repeat center fixed; /* #7B6B43; A warm earthy background color */
     background-size: cover;
     color: #FFF5E1; /* Soft off-white for text to complement the warm background */
     margin: 0;
@@ -44,16 +43,33 @@ h3 {
 }
 
 header {
-    background-color: rgba(47, 255, 0, 0.254);
+    /* background-color: rgba(16, 163, 0, 0.244); */
+    background-color: transparent;
     margin: 50px 0 50px 0;
     padding: 30px 0 30px 0;
+    text-align: center;
 }
 
 #headerInfo {
     color: #FFF5E1;
-    font-size: 30px;
-    opacity: 100%;
-    background-color: transparent;
+    font-family: 'Callie Chalk Font', sans-serif;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#headerInfo div {
+    text-overflow: hidden;
+    white-space: nowrap;
+}
+
+.chalkFont {
+    color: #004211;
+    font-family: 'Callie Chalk Font', sans-serif;
+    letter-spacing: 4px;
+    font-weight: larger;
+    font-size: larger;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
 }
 
 footer {
