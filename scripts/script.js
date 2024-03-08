@@ -93,13 +93,17 @@ message = message.toUpperCase();
 console.log(message);
 
 // playground - develop a animated banner that scrolls the message from left to right
-let playAnimation = false;
+let showAnimation = false;
 // yes or no user prompt upon page load - prompting "are you okay with viewing animation?"
-window.addEventListener("load", function accessiblePrompt(){
-    if(playAnimation = confirm("Hello! Are you okay with viewing an animation?")){
+window.addEventListener("DOMContentLoaded", () => {
+    if(showAnimation = confirm("Hello! Are you okay with viewing an animation?")){
         console.log( "Yay! Animations!" );
+        let banner = document.getElementById("headerInfo")
+        banner.textContent = message;
     }else {
         console.log("No animation, got it!");
+        let banner = document.getElementById("headerInfo")
+        bannerMessage.textContent = message;
+        banner.appendChild(bannerMessage);
     };
-}
-);
+});
