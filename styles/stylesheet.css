@@ -23,24 +23,24 @@ body {
 
 h1 {
     font-size: 48px;
-    color: #fffddc; /* A golden hue for headings to add warmth */
+    color: #004211; /* A golden hue for headings to add warmth */
     margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Softer text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2); /* Softer text shadow for depth */
 }
 
 p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Softer text shadow for depth */
-    color: #FFF8DC; /* Cream-colored text for easy reading against the warm background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2); /* Softer text shadow for depth */
+    color: #004211; /* Cream-colored text for easy reading against the warm background */
 }
 
 h3 {
     font-size: 28px;
-    color: #fffaee; /* Matching the golden hue for consistency in headings */
+    color: #004211; /* Matching the golden hue for consistency in headings */
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); /* Consistent text shadow styling with h1 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .2); /* Consistent text shadow styling with h1 */
 }
 
 header {
